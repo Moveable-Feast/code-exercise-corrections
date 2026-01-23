@@ -1,10 +1,9 @@
 -- 解答
-select round(count(t.a2_player) / (select count(distinct player_id) from activity), 2) fraction from
-  (select a1.player_id a1_player, min(a1.event_date) first_date, a2.player_id a2_player from
-  activity a1 left join activity a2
-  on a1.player_id = a2.player_id and a1.event_date + interval 1 day = a2.event_date
-  group by a1.player_id) t
-where t.a2_player is not null;
+select round(sum(a1.player_id is not null) / count(*), 2) fraction from
+(select player_id, event_date from activity) a1
+right join
+(select player_id, (min(event_date) + interval 1 day) second_logging from activity group by player_id) a2
+on a1.event_date = a2.second_logging and a1.player_id = a2.player_id;
 
 -- 答案
 select IFNULL(round(count(distinct(Result.player_id)) / count(distinct(Activity.player_id)), 2), 0) as fraction
