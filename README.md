@@ -1,28 +1,33 @@
-# coding_gym
+# code-exercise-corrections
 
 <div align="center">
-   Python与SQL练习工作区
+   编程习题订正工作区
 </div>
 
 ```mermaid
 graph TD
-rt(coding_gym) --> l1(用来做什么)
-rt(coding_gym) --> l2(包含什么语言)
+rt(此repository) --> l1(内容)
+rt --> l2(文件命名方法)
+rt --> l3(所含语言)
 
-l1 --> l11(存储编程学习)
-l1 --> l12(存储错题)
+l1 --> l11(存储LeetCode错题)
+l1 --> l12(存储牛客错题)
 
-l12 --> l121(无!表示通过测试)
-l12 --> l122(有!表示未通过测试)
+l11 --> l111(以网站训练计划分类)
+l12 --> l112(以习题集分类)
 
-l2 --> l21(Python)
-l2 --> l22(MySQL)
+l2 --> l21(无!表示通过测试)
+l2 --> l22(有!表示未通过测试)
 
-l21 --> l211(Runoob)
-l21 --> l212(刷题订正)
-l21 --> l213(纸质教材)
-
-l22 --> l211
-l22 --> l212
-l22 --> l213
+l3 --> l31(Python 3)
+l3 --> l32(MySQL)
 ```
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7dd8989d-5c93-4cb0-acb3-e3a5dd992601" 
+       alt="我的头像" 
+       width="200" 
+       height="200" 
+       style="border-radius: 50%; border: 5px solid #64FFDA; box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);"
+       class="rotate-on-hover">
+</div>
